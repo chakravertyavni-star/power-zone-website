@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="contact.css" />
+    <link href="navbar.css" rel="stylesheet">
+
+
+
+
+    <title>Contact Us | Power Zone</title>
+</head>
+
+<body>
+
+
+
+    <div id="navbar"></div>
+
+
+
+    <script>
+        let lastScroll = 0;
+        const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll) {
+                // scrolling down → hide navbar
+                navbar.classList.add("hide");
+            } else {
+                // scrolling up → show navbar
+                navbar.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- HERO -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p>We're here to help you start strong</p>
+        </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-wrapper">
+
+            <!-- INFO -->
+            <div class="contact-info">
+                <h2>Power Zone Gym</h2>
+                <p>Have questions about memberships, classes, or training?<br>
+                    Reach out and we'll get back to you shortly.</p>
+
+                <ul>
+                    <li><strong>📍 Address:</strong> Sector Chi V, Greater Noida</li>
+                    <li><strong>
+                    <li><strong>✉ Email:</strong> chakravertyavni@gmail.com</li>
+                    <li><strong>🕒 Hours:</strong> Mon – Sun : 5 AM – 11 PM</li>
+                </ul>
+            </div>
+
+            <!-- FORM -->
+            <form class="contact-form">
+                <h2>Send a Message</h2>
+
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <input type="tel" placeholder="Phone Number" />
+
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <script>
+        document.querySelector(".contact-form button")
+            .addEventListener("click", () => {
+                alert("Message sent successfully!");
+            });
+    </script>
+
+
+    <footer style="text-align:center; font-size:12px; opacity:0.6;">
+        Images sourced from Unsplash & Pexels (for educational use)
+    </footer>
+
+    <script src="navbar.js"></script>
+
+
+
+</body>
+
+</html>

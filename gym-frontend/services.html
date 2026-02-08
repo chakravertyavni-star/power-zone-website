@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Services | Power Zone</title>
+    <link rel="stylesheet" href="gym-front.css" />
+    <link href="navbar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+
+    <div class="w-screen h-screen flex flex-col justify-center items-center bg-black dark:bg-white">
+
+
+        <h1
+            class="relative w-full xl:text-9xl md:text-8xl text-5xl sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+            Unlock Our Services</h1>
+
+        <div class="next-btn-wrapper pt-20">
+            <button class="neon-next-btn" id="nextBtn">
+                NEXT →
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    keyframes: {
+                        dimlight: {
+                            '0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%': {
+                                color: '#0e3742',
+                                boxShadow: 'none',
+                            },
+                            '18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%': {
+                                color: '#fff',
+                                textShadow: '0 0 10px #03bcf4',
+                            },
+                        },
+                    },
+                    animation: {
+                        dimlight: 'dimlight 5s infinite',
+                    },
+                },
+            },
+            plugins: [
+                function ({
+                    addUtilities
+                }) {
+                    addUtilities({
+                        '.box-reflect': {
+                            '-webkit-box-reflect': 'below 1px linear-gradient(transparent, #0004)',
+                        },
+                    });
+                },
+            ],
+        }
+    </script>
+
+
+    <script>
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            window.location.href = "services-selection.html";
+        });
+    </script>
+
+
+
+    <script src="navbar.js"></script>
+</body>
+
+</html>

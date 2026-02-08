@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../gym-front.css">
+
+
+</head>
+
+
+<body>
+
+
+
+    <div class="page-wrap nutrition">
+
+        <div id="home-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!-- SLIDE 1 -->
+                    <div class="swiper-slide swiper-slide-one">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+                                <h1>
+                                    A <span class="emphasis">Nutrition Plan</span>.<br>
+                                    <span>Built Around You.</span>
+                                </h1>
+                                <p>Personalized Diet & Wellness Guidance</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                                <p class="paragraph">
+                                    Our nutrition programs are tailored to your body, goals, and lifestyle.
+                                    Whether you want to lose weight, improve digestion, build strength, or
+                                    develop healthier eating habits, you receive expert guidance designed
+                                    to fit naturally into your daily routine.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="swiper-slide swiper-slide-two">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                                <h1>
+                                    Total <span class="emphasis">Flexibility</span>.<br>
+                                    <span>No Crash Diets.</span>
+                                </h1>
+                                <p>Weekly · Monthly · Ongoing Support</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                                <p class="paragraph">
+                                    Choose consultation plans that work around your schedule.
+                                    No extreme restrictions, no generic meal plans. Adjust your nutrition
+                                    strategy as your body and goals evolve, with consistent support to help
+                                    you stay motivated and confident.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="swiper-slide swiper-slide-three">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+                                <h1>
+                                    Expert <span class="emphasis">Support</span>.<br>
+                                    <span>Beyond Meal Plans.</span>
+                                </h1>
+                                <p>Holistic Nutrition & Lifestyle Care</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+                                <p class="paragraph">
+                                    Go beyond basic diet charts with personalized meal planning,
+                                    progress tracking, habit coaching, grocery guidance, and lifestyle
+                                    recommendations. Our approach focuses on sustainable health and
+                                    long-term results you can maintain.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper@3.4.1/dist/js/swiper.min.js"></script>
+
+    <script>
+
+        var mySwiper = new Swiper(".swiper-container", {
+            direction: "vertical",
+            loop: true,
+            pagination: ".swiper-pagination",
+            grabCursor: true,
+            speed: 1000,
+            paginationClickable: true,
+            parallax: true,
+            autoplay: false,
+            effect: "slide",
+            mousewheelControl: 1
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

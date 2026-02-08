@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="amenities.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+
+
+
+
+    <title>Amenities</title>
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div id="navbar"></div>
+
+
+
+
+
+
+
+    <main>
+
+        <article style="--index: 0">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80" alt="Cardio Zone" />
+            </div>
+            <div class="article__info">
+                <h2>Cardio Zone</h2>
+                <p>High-end treadmills, bikes, and cross trainers designed to improve endurance and burn calories
+                    efficiently.</p>
+                <a href="#" data-template="cardio">Explore</a>
+            </div>
+        </article>
+
+        <article style="--index: 1">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80"
+                    alt="Strength Training Area" />
+            </div>
+            <div class="article__info">
+                <h2>Strength Training</h2>
+                <p>Power racks, free weights, and advanced machines built for muscle growth and strength conditioning.
+                </p>
+                <a href="#" data-template="strength">Explore</a>
+            </div>
+        </article>
+
+        <article style="--index: 2">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=1920&q=80"
+                    alt="Personal Training" />
+            </div>
+            <div class="article__info">
+                <h2>Personal Training</h2>
+                <p>One-on-one sessions with certified trainers focused on your goals, form, and long-term progress.</p>
+                <a href="#" data-template="trainers">Meet Trainers</a>
+
+            </div>
+        </article>
+
+        <article style="--index: 3">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=1920&q=80"
+                    alt="Group Fitness Classes" />
+            </div>
+            <div class="article__info">
+                <h2>Group Classes</h2>
+                <p>High-energy group workouts including HIIT, yoga, functional training, and strength circuits.</p>
+                <a href="#" data-template="classes">View Schedule</a>
+            </div>
+        </article>
+
+        <article style="--index: 4">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920&q=80"
+                    alt="Functional Training Area" />
+            </div>
+            <div class="article__info">
+                <h2>Functional Zone</h2>
+                <p>Dedicated space for agility, mobility, kettlebells, ropes, and full-body functional workouts.</p>
+                <a href="#" data-template="functional">Explore</a>
+            </div>
+        </article>
+
+        <article style="--index: 5">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1920&q=80"
+                    alt="Stretching and Mobility Area" />
+            </div>
+            <div class="article__info">
+                <h2>Stretch & Mobility</h2>
+                <p>Recovery-focused area for stretching, foam rolling, and improving flexibility after workouts.</p>
+                <a href="#" data-template="mobility">Recover Better</a>
+            </div>
+        </article>
+
+        <article style="--index: 6">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=1920&q=80" alt="Locker Room" />
+            </div>
+            <div class="article__info">
+                <h2>Locker Rooms</h2>
+                <p>Clean, spacious locker rooms with secure storage, showers, and modern amenities.</p>
+                <a href="#" data-template="locker">View Facilities</a>
+            </div>
+        </article>
+
+        <article style="--index: 7">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=80"
+                    alt="Steam room and muscle recovery area in gym" />
+            </div>
+            <div class="article__info">
+                <h2>Steam & Recovery</h2>
+                <p>Relax and recover with steam facilities designed to relieve muscle tension and improve circulation.
+                </p>
+                <a href="#" data-template="recovery">Relax</a>
+            </div>
+        </article>
+
+        <article style="--index: 8">
+            <div class="article__img">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80"
+                    alt="Nutrition and healthy fuel bar" />
+            </div>
+            <div class="article__info">
+                <h2>Nutrition Support</h2>
+                <p>Personalized nutrition guidance to complement your training and help you achieve better results.</p>
+                <a href="#" data-template="nutrition">Learn More</a>
+            </div>
+        </article>
+
+
+    </main>
+
+    <script src="navbar.js"></script>
+
+
+
+    <script>
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            if (!navbar) return;
+
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                navbar.classList.add("hide");
+            } else {
+                navbar.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+
+
+    <script src="scripts/amenities-template.js" defer></script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

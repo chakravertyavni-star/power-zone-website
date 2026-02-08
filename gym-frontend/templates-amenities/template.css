@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    font-size: 18px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background-color: white;
+
+}
+
+section {
+    position: relative;
+    transform-style: inherit;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* ==============================
+   CARDIO HERO BACKGROUNDS
+   ============================== */
+
+/* ==============================
+   CARDIO HERO BACKGROUNDS (ONLY)
+   ============================== */
+
+#cardiohero-1::before {
+    background-image: url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#cardiohero-2::before {
+    background-image: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+}
+
+#cardiohero-3::before {
+    background-image: url("https://images.unsplash.com/photo-1502904550040-7534597429ae?w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+/* ==============================
+   CLASSES HERO BACKGROUNDS
+   ============================== */
+
+
+
+
+
+/* ==============================
+   CLASSES HERO BACKGROUNDS (NEW)
+   ============================== */
+
+#classeshero-1::before {
+    /* Group HIIT / circuit training */
+    background-image: url("https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#classeshero-2::before {
+    /* Indoor fitness class with instructor */
+    background-image: url("https://images.pexels.com/photos/866023/pexels-photo-866023.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-1px) scale(2);
+    z-index: -2;
+}
+
+#classeshero-3::before {
+    /* Yoga / group stretch / mindfulness */
+    background-image: url("https://images.pexels.com/photos/8436583/pexels-photo-8436583.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+/* ==============================
+   STRENGTH HERO BACKGROUNDS
+   ============================== */
+
+#strengthhero-1::before {
+    /* Barbell / free weights */
+    background-image: url("https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#strengthhero-2::before {
+    /* Heavy lifting / gym floor */
+    background-image: url("https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.5px) scale(1.6);
+    z-index: -2;
+}
+
+#strengthhero-3::before {
+    /* Dumbbells / intense training */
+    background-image: url("https://images.pexels.com/photos/416809/pexels-photo-416809.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+/* ==============================
+   PERSONAL TRAINER HERO IMAGES
+   ============================== */
+
+#trainerhero-1::before {
+    /* Trainer assisting client */
+    background-image: url("https://images.pexels.com/photos/6455776/pexels-photo-6455776.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#trainerhero-2::before {
+    /* Personal coaching / form correction */
+    background-image: url("https://images.pexels.com/photos/4720776/pexels-photo-4720776.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    size: cover;
+    background-position: center;
+    transform: translateZ(-0.6px) scale(1.6);
+    z-index: -2;
+}
+
+#trainerhero-3::before {
+    /* Trainer motivating client */
+    background-image: url("https://images.pexels.com/photos/6456302/pexels-photo-6456302.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+/* ==============================
+   FUNCTIONAL TRAINING (STABLE)
+   ============================== */
+
+#functionalhero-1::before {
+    background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#functionalhero-2::before {
+    background-image: url("https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.6px) scale(1.6);
+    z-index: -2;
+}
+
+#functionalhero-3::before {
+    background-image: url("https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+
+/* ==============================
+   STRETCH & MOBILITY HERO IMAGES
+   ============================== */
+
+#mobilityhero-1::before {
+    /* Stretching / flexibility training */
+    background-image: url("https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#mobilityhero-2::before {
+    /* Mobility drills / controlled movement */
+    background-image: url("https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.6px) scale(1.6);
+    z-index: -2;
+}
+
+#mobilityhero-3::before {
+    /* Recovery stretching / calm flexibility */
+    background-image: url("https://images.pexels.com/photos/3757377/pexels-photo-3757377.jpeg?auto=compress&cs=tinysrgb&w=1920");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+#lockerhero-1::before {
+    /* Modern gym / sports locker room */
+    background-image: url("../images/locker-5.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#lockerhero-2::before {
+    /* Athletic locker room with benches */
+    background-image: url("../images/locker-2.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.6px) scale(1.6);
+    z-index: -2;
+}
+
+#lockerhero-3::before {
+    /* Stadium / premium fitness locker room */
+    background-image: url("../images/locker-6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+
+
+
+#recoveryhero-1::before {
+    /* Steam room / sauna recovery */
+    background-image: url("../images/steam.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#recoveryhero-2::before {
+    /* Sauna / heat therapy */
+    background-image: url("../images/sauna.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.5px) scale(1.6);
+    z-index: -2;
+}
+
+#recoveryhero-3::before {
+    /* Massage / recovery therapy */
+    background-image: url("../images/massage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+
+
+#nutritionhero-1::before {
+    /* Healthy balanced diet */
+    background-image: url("https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+
+#nutritionhero-2::before {
+    /* Meal prep / macro-balanced food */
+    background-image: url("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-0.5px) scale(1.6);
+    z-index: -2;
+}
+
+#nutritionhero-3::before {
+    /* Clean eating / nutrition lifestyle */
+    background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   DARK OVERLAY (GLOBAL)
+   ============================== */
+
+section.hero::before {
+    filter: brightness(0.45);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+
+
+section.hero>.container {
+    padding: 40vh 0;
+    text-align: center;
+    font-size: 5rem;
+    color: whitesmoke;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+section.hero>.container>span {
+    font-size: 3.4rem;
+    font-weight: 100;
+    opacity: 0.6;
+}
+
+/* CONTENT SECTIONS*/
+section.content {
+    text-align: center;
+
+}
+
+section.content>.container {
+    font-size: 2.4rem;
+    color: black;
+    padding: 15vh 0;
+    opacity: 0.6;
+}
+
+#content-2 {
+    padding: 0;
+}
+
+#content-2>.container {
+    padding: 90vh 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    section.content .container {
+        font-size: 1.4rem;
+        /* smaller text */
+        line-height: 1.4;
+        max-width: 90%;
+        margin: 0 auto;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* show only 3 lines */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    section.hero>.container {
+        font-size: 2.4rem;
+        /* smaller heading */
+        line-height: 1.1;
+        padding: 35vh 1rem;
+        /* tighter vertical spacing */
+    }
+
+    section.hero>.container span {
+        font-size: 1.4rem;
+        /* smaller subtitle */
+    }
+}

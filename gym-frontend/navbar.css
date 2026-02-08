@@ -1,0 +1,69 @@
+.hidden {
+    display: none !important;
+}
+
+
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1001;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* ===== MOBILE DROPDOWN ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo a {
+        font-size: 23px;
+    }
+
+
+    /* hide nav links by default */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        /* below navbar */
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(6px);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+
+        display: none !important;
+        /* 🔥 force override */
+
+    }
+
+    /* show on click */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    /* remove mobile spacing hacks */
+    .nav-links a {
+        font-size: 18px;
+    }
+
+
+}

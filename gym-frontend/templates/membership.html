@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../gym-front.css">
+
+
+</head>
+
+
+<body>
+
+
+
+    <div class="page-wrap">
+
+        <div id="home-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-one">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+                                <h1>A <span class="emphasis">Membership</span>. <br><span>That Fits You.</span></h1>
+                                <p>Gym Access & Benefits</p>
+
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                                <p class="paragraph">
+                                    Our membership plans are designed to adapt to your lifestyle. Whether you’re
+                                    beginning
+                                    your fitness journey or working toward advanced goals, you get full access to modern
+                                    equipment, clean workout spaces, and an environment built to keep you consistent.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-two">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                                <h1>Total <span class="emphasis">Flexibility</span>. <br><span>No Pressure.</span></h1>
+                                <p>Monthly · Quarterly · Yearly</p>
+
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                                <p class="paragraph">
+                                    Choose from flexible membership options that work around your schedule. No long-term
+                                    lock-ins, no hidden fees. Upgrade, pause, or switch plans anytime and train at your
+                                    own pace without compromising on quality or support.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-three">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+                                <h1>Exclusive <span class="emphasis">Perks</span>. <br><span>Just for Members.</span>
+                                </h1>
+                                <p>More Than Just a Gym</p>
+
+                            </div>
+                        </div>
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+                                <p class="paragraph">
+                                    Members enjoy exclusive benefits including group classes, trainer guidance, priority
+                                    access to equipment, nutrition support, and special fitness programs designed to
+                                    help
+                                    you stay motivated and see real results.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/swiper@3.4.1/dist/js/swiper.min.js"></script>
+
+    <script>
+
+        var mySwiper = new Swiper(".swiper-container", {
+            direction: "vertical",
+            loop: true,
+            pagination: ".swiper-pagination",
+            grabCursor: true,
+            speed: 1000,
+            paginationClickable: true,
+            parallax: true,
+            autoplay: false,
+            effect: "slide",
+            mousewheelControl: 1
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

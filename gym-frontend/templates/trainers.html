@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../gym-front.css">
+
+
+</head>
+
+
+<body>
+
+
+    <div class="page-wrap trainers">
+
+        <div id="home-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <!-- SLIDE 1 -->
+                    <div class="swiper-slide swiper-slide-one">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-one">
+                                <h1>
+                                    Train With <span class="emphasis">Experts</span>.<br>
+                                    <span>See Real Results.</span>
+                                </h1>
+                                <p>Certified Personal Trainers</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                                <p class="paragraph">
+                                    Work one-on-one with certified trainers who understand your body,
+                                    your goals, and your limits. Every session is designed to maximize
+                                    performance, prevent injury, and deliver visible progress.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="swiper-slide swiper-slide-two">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                                <h1>
+                                    Personalized <span class="emphasis">Training</span>.<br>
+                                    <span>No Guesswork.</span>
+                                </h1>
+                                <p>Strength · Fat Loss · Conditioning</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                                <p class="paragraph">
+                                    Your training plan is built specifically for you. Whether your focus
+                                    is weight loss, muscle building, endurance, or overall fitness, our
+                                    trainers adjust workouts in real time to match your progress.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="swiper-slide swiper-slide-three">
+                        <div class="swiper-image" data-swiper-parallax-y="-20%">
+                            <div class="swiper-image-inner swiper-image-left swiper-image-five">
+                                <h1>
+                                    Motivation <span class="emphasis">That Lasts</span>.<br>
+                                    <span>Accountability Included.</span>
+                                </h1>
+                                <p>More Than Just Workouts</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-image" data-swiper-parallax-y="35%">
+                            <div class="swiper-image-inner swiper-image-right swiper-image-six">
+                                <p class="paragraph">
+                                    Our trainers keep you motivated, disciplined, and consistent.
+                                    From form correction and progress tracking to mindset coaching,
+                                    you get the support you need to stay committed and achieve
+                                    long-term results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper@3.4.1/dist/js/swiper.min.js"></script>
+
+    <script>
+
+        var mySwiper = new Swiper(".swiper-container", {
+            direction: "vertical",
+            loop: true,
+            pagination: ".swiper-pagination",
+            grabCursor: true,
+            speed: 1000,
+            paginationClickable: true,
+            parallax: true,
+            autoplay: false,
+            effect: "slide",
+            mousewheelControl: 1
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* ===== GLOBAL VISIBILITY CONTROL (DO NOT OVERRIDE) ===== */
+.hidden {
+    display: none !important;
+}
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    min-height: 80px;
+    color: whitesmoke;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.navbar.hide {
+    transform: translateY(-100%);
+}
+
+.logo a {
+    font-size: 44px;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    /* space between menu items */
+    z-index: 2;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #b1d1b9;
+}
+
+
+
+.container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: radial-gradient(ellipse 1.5px 2px at 1.5px 50%,
+            #0000 0,
+            #0000 90%,
+            #000 100%);
+    background-size: 25px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO */
+.contact-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 4rem 1.5rem;
+}
+
+.contact-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* INFO */
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+}
+
+/* FORM */
+.contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00ff9c;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.9rem;
+    background: #00ff9c;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #00e68a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+    .navbar {
+        min-height: 72px;
+        padding: 0 20px;
+    }
+
+    .logo a {
+        font-size: 34px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 17px;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 64px;
+        padding: 0 16px;
+    }
+
+    .logo a {
+        font-size: 26px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 60px;
+        padding: 0 12px;
+    }
+
+    .logo a {
+        font-size: 22px;
+        white-space: nowrap;
+
+    }
+
+    /* Optional: hide links if space is too tight */
+    .nav-links {
+        display: flex;
+    }
+}

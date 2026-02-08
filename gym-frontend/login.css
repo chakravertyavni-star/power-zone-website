@@ -1,0 +1,317 @@
+ * {
+     font-family: system-ui, sans-serif;
+ }
+
+
+ .navbar {
+     position: fixed;
+
+     top: 0;
+     left: 0;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 30px;
+     min-height: 80px;
+     color: whitesmoke;
+     z-index: 1000;
+     background: rgba(0, 0, 0, 0.25);
+     backdrop-filter: blur(4px);
+     transition: transform 0.3s ease;
+ }
+
+
+
+
+ .navbar.hide {
+     transform: translateY(-100%);
+ }
+
+ .logo a {
+     font-size: 44px;
+     font-weight: bold;
+     z-index: 2;
+     cursor: pointer;
+     text-decoration: none;
+     color: white;
+ }
+
+ .nav-links {
+     list-style: none;
+     display: flex;
+     gap: 25px;
+     /* space between menu items */
+     z-index: 2;
+ }
+
+ .nav-links a {
+     text-decoration: none;
+     color: white;
+     font-size: 18px;
+     transition: 0.2s;
+ }
+
+ .nav-links a:hover {
+     color: #b1d1b9;
+ }
+
+
+ .hidden {
+     display: none;
+ }
+
+ .toggle-link {
+     color: #00ff9c;
+     cursor: pointer;
+     font-weight: 600;
+ }
+
+
+
+ /* LOGIN OVERLAY */
+ .login-overlay {
+     position: absolute;
+     inset: 0;
+     display: grid;
+     place-items: center;
+     z-index: 10;
+     /* above animation */
+     pointer-events: none;
+     /* allow animation behind */
+ }
+
+ /* LOGIN BOX */
+ .login-box {
+     pointer-events: auto;
+     background: rgba(0, 0, 0, 0.65);
+     backdrop-filter: blur(10px);
+     padding: 2.5rem;
+     width: 620px;
+
+     border-radius: 10px;
+     text-align: center;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+ }
+
+ .login-box h2 {
+     margin-bottom: 1.5rem;
+     color: #fff;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .login-box input {
+     width: 100%;
+     padding: 0.75rem;
+     margin-bottom: 1rem;
+     background: #111;
+     border: 1px solid #333;
+     color: #fff;
+     border-radius: 4px;
+ }
+
+ .login-box input:focus {
+     outline: none;
+     border-color: #00ff9c;
+ }
+
+ .login-box button {
+     width: 100%;
+     padding: 0.8rem;
+     background: #00ff9c;
+     color: #000;
+     font-weight: bold;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     text-transform: uppercase;
+ }
+
+ .login-box button:hover {
+     background: #00e68a;
+ }
+
+ .login-note {
+     margin-top: 1rem;
+     font-size: 0.8rem;
+     opacity: 0.6;
+     color: #fff;
+ }
+
+ /* MOBILE */
+ @media (max-width: 480px) {
+     .login-box {
+         width: 90%;
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .rave-section {
+     width: 100%;
+     height: 100vh;
+     background: black;
+     /* subtle glass effect */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .rave-stage {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+     /* contains the effect */
+     perspective: 800px;
+     /* 3D only inside this box */
+ }
+
+ .rave-container {
+     width: 100%;
+     height: 100%;
+     display: grid;
+     place-items: center;
+ }
+
+ .box {
+     position: relative;
+     transform-style: preserve-3d;
+     animation: animate 5s ease-in-out infinite alternate;
+ }
+
+ .box span {
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform-style: preserve-3d;
+     transform:
+         translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(120px);
+
+     font-size: 3.8rem;
+     font-weight: 900;
+     white-space: nowrap;
+     text-transform: uppercase;
+     padding: 0 20px;
+     color: #fff;
+     text-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+ }
+
+ .box span i {
+     font-style: normal;
+ }
+
+ .box span i:nth-child(1) {
+     color: #5c5fc4;
+ }
+
+ .box span i:nth-child(2) {
+     color: #c4c15c;
+ }
+
+ @keyframes animate {
+     0% {
+         transform: rotateX(0deg);
+     }
+
+     50% {
+         transform: rotateX(180deg) scale(1.15);
+     }
+
+     100% {
+         transform: rotateX(360deg);
+     }
+ }
+
+
+
+
+
+
+
+
+
+ @media (max-width: 768px) {
+
+     .navbar {
+         min-height: 64px;
+         padding: 0 16px;
+         gap: 17px;
+     }
+
+     .logo a {
+         font-size: 20px;
+         white-space: nowrap;
+     }
+
+     .nav-links {
+         gap: 7px;
+     }
+
+     .nav-links a {
+         font-size: 15px;
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width: 768px) {
+
+     /* Make rave section shorter */
+     .rave-section {
+         height: 100vh;
+     }
+
+     /* Reduce 3D depth */
+     .box span {
+         font-size: 2.2rem;
+         transform:
+             translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(70px);
+     }
+
+     /* Slow animation slightly for mobile */
+     .box {
+         animation-duration: 6s;
+     }
+
+     /* Login box smaller */
+     .login-box {
+         width: 90%;
+         padding: 2rem;
+     }
+
+     .login-box h2 {
+         font-size: 1.3rem;
+     }
+
+     .login-box input,
+     .login-box button {
+         font-size: 0.95rem;
+     }
+ }
