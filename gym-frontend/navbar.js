@@ -2,7 +2,7 @@ const navbarHTML = `
 <nav class="navbar">
   <div class="nav-left">
     <div class="logo">
-      <a href="index.html">Power Zone</a>
+      <a href="../index.html">Power Zone</a>
     </div>
   </div>
 
@@ -16,7 +16,7 @@ const navbarHTML = `
   <!-- NAV LINKS -->
   <ul class="nav-links" id="navLinks">
   
-    <li><a href="index.html">Home</a></li>
+    <li><a href="../index.html">Home</a></li>
     <li><a href="amenities.html">Amenities</a></li>
     <li><a href="contact.html">Contact</a></li>
 
