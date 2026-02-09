@@ -87,6 +87,8 @@ router.post("/services", authMiddleware, async (req, res) => {
         console.log(err);
         res.status(500).json({ message: "Server error" });
     }
+    if (!User) return res.status(404).json({ message: "User not found" });
+
 });
 
 
