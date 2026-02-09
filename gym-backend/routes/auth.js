@@ -115,4 +115,29 @@ router.get("/me", authMiddleware, async (req, res) => {
 });
 
 
+
+
+// ================= ADMIN: GET ALL USERS =================
+router.get("/admin/users", authMiddleware, async (req, res) => {
+    try {
+        const adminEmail = "samya@gmail.com"; // your admin email
+
+        const admin = await User.findById(req.user.id);
+
+        if (!admin || admin.email !== adminEmail) {
+            return res.status(403).json({ message: "Access denied" });
+        }
+
+        const users = await User.find().select("email services");
+
+        res.json(users);
+
+    } catch (err) {
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
+
+
 module.exports = router;
+
