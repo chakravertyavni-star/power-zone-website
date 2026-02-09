@@ -74,6 +74,32 @@
         }
 
         loadDashboard();
+
+        async function loadUserEmail() {
+            const token = localStorage.getItem("token");
+
+            try {
+                const response = await fetch("https://power-zone-website.onrender.com/api/auth/me", {
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                });
+
+                if (!response.ok) return;
+
+                const data = await response.json();
+
+                document.getElementById("welcomeText").innerText =
+                    "Welcome, " + data.email;
+
+            } catch (err) {
+                console.log("Could not load user");
+            }
+        }
+
+        loadUserEmail();
+
+
     </script>
 
     <script src="navbar.js"></script>
