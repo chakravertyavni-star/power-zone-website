@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="gym-front.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body class="dark-page">
+
+    <div id="navbar"></div>
+
+    <h1 style="text-align:center; margin-top:100px;">Admin Panel</h1>
+
+    <table border="1" style="margin: 30px auto; color:white;">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Services</th>
+            </tr>
+        </thead>
+        <tbody id="usersTable"></tbody>
+    </table>
+
+    <script>
+        async function loadUsers() {
+            const token = localStorage.getItem("token");
+
+            const res = await fetch("https://power-zone-website.onrender.com/api/auth/admin/users", {
+                headers: {
+                    "Authorization": "Bearer " + token
+                }
+            });
+
+            if (!res.ok) {
+                alert("Not authorized");
+                return;
+            }
+
+            const users = await res.json();
+
+            const table = document.getElementById("usersTable");
+            table.innerHTML = "";
+
+            users.forEach(user => {
+                const services = [];
+
+                if (user.services.personalTrainer) services.push("Trainer");
+                if (user.services.nutritionist) services.push("Nutritionist");
+                if (user.services.weekendSession) services.push("Weekend");
+
+                table.innerHTML += `
+            <tr>
+                <td>${user.email}</td>
+                <td>${services.join(", ") || "None"}</td>
+            </tr>
+        `;
+            });
+        }
+
+        loadUsers();
+    </script>
+
+    <script src="navbar.js"></script>
+
+</body>
+
+</html>
