@@ -24,6 +24,11 @@ const navbarHTML = `
       <a href="services.html" >Services</a>
     </li>
 
+    <li id="dashboardNav" class="hidden">
+    <a href="dashboard.html">Dashboard</a>
+    </li>
+
+
     <li id="loginNav">
       <a href="login.html">Login</a>
     </li>
@@ -86,10 +91,14 @@ function updateNavbar() {
     servicesNav.classList.remove("hidden");
     logoutNav.classList.remove("hidden");
     loginNav.classList.add("hidden");
+    dashboardNav.classList.remove("hidden");
+
   } else {
     servicesNav.classList.add("hidden");
     logoutNav.classList.add("hidden");
     loginNav.classList.remove("hidden");
+    dashboardNav.classList.add("hidden");
+
   }
 }
 
