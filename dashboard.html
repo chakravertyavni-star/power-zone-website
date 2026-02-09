@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard | Power Zone</title>
+
+    <link rel="stylesheet" href="gym-front.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body class="dark-page">
+
+    <!-- Protect page -->
+    <script>
+        if (!localStorage.getItem("token")) {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <div id="navbar"></div>
+
+    <section class="dashboard-container">
+
+        <h1 id="welcomeText">Welcome Member</h1>
+
+        <div class="dashboard-card">
+            <h2>Your Selected Services</h2>
+            <ul id="servicesList">
+                <li>Loading...</li>
+            </ul>
+        </div>
+
+        <button class="neon-next-btn" onclick="window.location.href='services-selection.html'">
+            Update Services
+        </button>
+
+    </section>
+
+    <!-- LOAD SERVICES -->
+    <script>
+        async function loadDashboard() {
+            const token = localStorage.getItem("token");
+
+            try {
+                const response = await fetch("https://power-zone-website.onrender.com/api/auth/services", {
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                });
+
+                if (!response.ok) {
+                    localStorage.removeItem("token");
+                    window.location.href = "login.html";
+                    return;
+                }
+
+                const services = await response.json();
+
+                const list = document.getElementById("servicesList");
+                list.innerHTML = "";
+
+                if (services.personalTrainer) list.innerHTML += "<li>Personal Trainer</li>";
+                if (services.nutritionist) list.innerHTML += "<li>Nutritionist</li>";
+                if (services.weekendSession) list.innerHTML += "<li>Weekend Sessions</li>";
+
+                if (!services.personalTrainer && !services.nutritionist && !services.weekendSession) {
+                    list.innerHTML = "<li>No services selected</li>";
+                }
+
+            } catch (err) {
+                console.log("Dashboard load error");
+            }
+        }
+
+        loadDashboard();
+    </script>
+
+    <script src="navbar.js"></script>
+
+</body>
+
+</html>

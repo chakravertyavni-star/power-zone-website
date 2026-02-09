@@ -2550,6 +2550,19 @@ button.swiper-pagination-bullet {
 
 
 
+.dashboard-container {
+  max-width: 800px;
+  margin: 120px auto;
+  text-align: center;
+  color: white;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+}
 
 
 
