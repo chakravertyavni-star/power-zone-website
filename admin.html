@@ -46,9 +46,10 @@
             users.forEach(user => {
                 const services = [];
 
-                if (user.services.personalTrainer) services.push("Trainer");
-                if (user.services.nutritionist) services.push("Nutritionist");
-                if (user.services.weekendSession) services.push("Weekend");
+                if (user.services?.personalTrainer) services.push("Trainer");
+                if (user.services?.nutritionist) services.push("Nutritionist");
+                if (user.services?.weekendSession) services.push("Weekend");
+
 
                 table.innerHTML += `
             <tr>
