@@ -1,8 +1,11 @@
 # Node
 node_modules/
+frontend/node_modules/
+frontend/dist/
 
 # Environment files
 .env
+frontend/.env
 
 # OS / editor junk
 .DS_Store

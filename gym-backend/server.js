@@ -15,11 +15,17 @@ connectDB();
 
 // routes
 const authRoutes = require("./routes/auth");
+const contactRoutes = require("./routes/contact");
 app.use("/api/auth", authRoutes);
+app.use("/api/contact", contactRoutes);
 
 // test route
 app.get("/", (req, res) => {
     res.send("Power Zone Backend Running");
+});
+
+app.get("/api/health", (req, res) => {
+    res.json({ ok: true });
 });
 
 const PORT = process.env.PORT || 5000;
